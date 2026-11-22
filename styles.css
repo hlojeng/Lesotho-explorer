@@ -1,0 +1,318 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    color: #263238;
+    background-color: #f5f5f5;
+    font-family: Arial, sans-serif;
+}
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 18px 6%;
+    color: white;
+    background-color: #142b3b;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: white;
+    font-size: 23px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.logo-icon {
+    font-size: 30px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.navbar a {
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+    transition: color 0.4s;
+}
+
+.navbar a:hover {
+    color: #e8b45b;
+}
+
+
+.one {
+    display: flex;
+    align-items: center;
+    min-height: 430px;
+    padding: 60px 8%;
+    color: white;
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+        url("falls.jpg") center / cover no-repeat;
+}
+
+.content-one {
+    max-width: 650px;
+}
+
+.subtitle {
+    margin-bottom: 15px;
+    color: #d99d42;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.one h1 {
+    margin-bottom: 20px;
+    font-size: 45px;
+}
+
+.content-one > p:not(.subtitle) {
+    margin-bottom: 25px;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+.one-a,
+.card-a {
+    display: inline-block;
+    border-radius: 6px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.one-a {
+    padding: 14px 22px;
+    color: #142b3b;
+    background-color: #d99d42;
+}
+
+
+.two {
+    padding: 65px 7%;
+    text-align: center;
+}
+
+.two h2 {
+    margin-bottom: 15px;
+    font-size: 30px;
+}
+
+.two p {
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+.section-heading {
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+.section-heading h2 {
+    margin-bottom: 12px;
+    font-size: 32px;
+}
+
+.about h2 {
+    margin-bottom: 12px;
+    font-size: 30px;
+}
+
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.card {
+    overflow: hidden;
+    border-radius: 12px;
+    background-color: whitesmoke;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: 0.3s ease;
+}
+
+.card:hover {
+    transform: translateX(-8px);
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.18);
+}
+
+.card-a {
+    padding: 9px 17px;
+    color: white;
+    background-color: #142b3b;
+}
+
+.image-container {
+    position: relative;
+}
+
+.card img {
+    display: block;
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+}
+
+.badge {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    padding: 6px 10px;
+    border-radius: 20px;
+    background-color: #e8b45b;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.card-content p {
+    margin-bottom: 18px;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* About page */
+.about-page {
+    max-width: 850px;
+    margin: auto;
+    padding: 70px 8%;
+    line-height: 1.8;
+}
+
+.about-page h1 {
+    margin-bottom: 20px;
+    font-size: 36px;
+}
+
+.about-page h2 {
+    margin: 30px 0 10px;
+}
+
+
+.contact-page {
+    max-width: 750px;
+    margin: auto;
+    padding: 60px 6%;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 30px;
+    border-radius: 12px;
+    background-color: whitesmoke;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 15px;
+}
+
+.contact-form button {
+    padding: 13px;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    background-color: #142b3b;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.contact-form button:hover {
+    color: #142b3b;
+    background-color: #d99d42;
+}
+
+#formMessage {
+    display: block;
+    min-height: 24px;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+/* Footer */
+.footer {
+    padding: 35px 15px;
+    color: white;
+    background-color: #142b3b;
+    text-align: center;
+}
+
+.footer h2,
+.footer p {
+    margin-bottom: 12px;
+}
+
+
+@media (max-width: 850px) {
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .one h1 {
+        font-size: 36px;
+    }
+}
+
+
+@media (max-width: 600px) {
+    .header {
+        flex-direction: column;
+    }
+
+    .navbar {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .logo {
+        font-size: 21px;
+    }
+
+    .one {
+        min-height: 380px;
+        padding: 45px 6%;
+    }
+
+    .one h1 {
+        font-size: 26px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .section-heading h2,
+    .about h2 {
+        font-size: 26px;
+    }
+}
